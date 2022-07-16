@@ -77,21 +77,27 @@ WSGI_APPLICATION = 'stocks_products.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-with open('pass.txt') as p:
-    PASSWORD = p.read()
-
+# with open('pass.txt') as p:
+#     PASSWORD = p.read()
+#
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'djangohw3.2',
+#         'USER': 'postgres',
+#         'PASSWORD': PASSWORD,
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangohw3.2',
-        'USER': 'postgres',
-        'PASSWORD': PASSWORD,
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'stocks_products',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
